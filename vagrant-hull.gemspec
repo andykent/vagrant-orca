@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = VagrantPlugins::Hull::VERSION
   spec.authors       = ["Andy Kent"]
   spec.email         = ["andy.kent@me.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Vagrant Hull Provisioner}
+  spec.summary       = %q{Use Vagraant to provision Hull files}
   spec.homepage      = ""
   spec.license       = "MIT"
 

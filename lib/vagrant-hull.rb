@@ -7,11 +7,17 @@ rescue LoadError
 end
 
 module VagrantPlugins
-  module Hull
-  end
-end
+  class HullProvisioner < Vagrant.plugin("2")
+    name "Hull Provisioner"
 
-provisioner :hull do
-  require_relative "./vagrant-hull/provisioner"
-  VagrantPlugins::Hull::Provisioner
+    config(:hull, :provisioner) do
+      require_relative "./vagrant-hull/config"
+      VagrantPlugins::Hull::Config
+    end
+
+    provisioner :hull do
+      require_relative "./vagrant-hull/provisioner"
+      VagrantPlugins::Hull::Provisioner
+    end
+  end
 end
