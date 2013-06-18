@@ -1,5 +1,5 @@
 module VagrantPlugins
-  module Hull
+  module Orca
     class Config < Vagrant.plugin("2", :config)
       attr_accessor :file
       attr_accessor :package
@@ -10,7 +10,7 @@ module VagrantPlugins
       end
 
       def finalize!
-        @file = './hull/hull.rb' if @file == UNSET_VALUE
+        @file = './orca/orca.rb' if @file == UNSET_VALUE
         @package = 'app' if @package == UNSET_VALUE
       end
     end

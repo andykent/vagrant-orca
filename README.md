@@ -1,4 +1,4 @@
-# Vagrant::Hull
+# Vagrant::Orca
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'vagrant-hull'
+    gem 'vagrant-orca'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install vagrant-hull
+    $ gem install vagrant-orca
 
 ## Usage
 
