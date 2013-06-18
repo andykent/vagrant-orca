@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = VagrantPlugins::Orca::VERSION
   spec.authors       = ["Andy Kent"]
   spec.email         = ["andy.kent@me.com"]
-  spec.description   = %q{Vagrant Orca Provisioner}
-  spec.summary       = %q{Use Vagraant to provision Orca files}
+  spec.description   = %q{Vagrant Provisioner Plugin for Orca}
+  spec.summary       = %q{Use Vagrant to provision Orca build files}
   spec.homepage      = ""
   spec.license       = "MIT"
 
