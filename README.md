@@ -1,29 +1,35 @@
-# Vagrant::Orca
+Vagrant Provisioner Plugin for Orca
+===================================
 
-TODO: Write a gem description
+Orca is a simplified server build system. See: https://github.com/andykent/orca for more info.
 
-## Installation
 
-Add this line to your application's Gemfile:
+Installation
+------------
 
-    gem 'vagrant-orca'
+Install the vagrant plugin...
 
-And then execute:
+    vagrant plugin install vagrant-orca
 
-    $ bundle
+Then add orca as a provisioner in you Vagrantfile config...
 
-Or install it yourself as:
+    config.vm.provision :orca
 
-    $ gem install vagrant-orca
 
-## Usage
+Configuration
+-------------
 
-TODO: Write usage instructions here
+By default Orca will try to load `./orca/orca.rb` and apply a package named `app` this can optionally be configured as shown below.
 
-## Contributing
+    config.vm.provision :orca do |orca|
+      orca.file = 'config/build.rb'
+      orca.package = 'webserver'
+    end
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+
+Usage
+-----
+
+Once configured Orca should simply run as part of the vm build process so all you need to do is...
+
+    vagrant up
