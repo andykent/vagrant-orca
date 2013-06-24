@@ -13,7 +13,7 @@ module VagrantPlugins
 
         node = ::Orca::Node.new(@machine.name, o[:host], :port => o[:port], :user => o[:username], :keys => o[:private_key_path])
 
-        suite.execute(node, @config.package, :apply)
+        suite.run(node.name, @config.package, :apply)
       end
     end
   end
